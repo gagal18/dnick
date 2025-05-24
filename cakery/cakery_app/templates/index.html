@@ -34,9 +34,9 @@
         <p class="text-secondary text-center">Add more products in the edit form</p>
     </div>
 
-    <div class="row">
+    <div class="row p-5">
         {% for cake in cakes %}
-            <div class="col-4 px-5">
+            <div class="col-4 p-2">
                 <div class="card">
                     {% if cake.image %}
                         <img src="{{ cake.image.url }}" class="card-img-top" alt="{{ cake.name }}">
