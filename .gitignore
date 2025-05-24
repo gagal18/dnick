@@ -1,0 +1,63 @@
+# ======================
+# Global Python ignores
+# ======================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pyo
+*.pyd
+
+# Byte-compiled / cache / logs / coverage
+*.log
+*.pot
+*.mo
+*.cover
+*.py,cover
+.coverage
+coverage.xml
+.cache
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+
+# ======================
+# Virtual environments
+# ======================
+env/
+venv/
+ENV/
+.venv/
+.env/
+.ENV/
+*.env
+
+# ======================
+# OS-specific
+# ======================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+*~
+
+# ======================
+# IDEs & Editors
+# ======================
+.vscode/
+.idea/
+
+# ======================
+# Django project-specific (applies to all django1/, django2/)
+# ======================
+**/db.sqlite3
+**/media/*
+**/bootstrap/
+
+# ======================
+# Project-local settings
+# ======================
+**/settings_local.py
+**/secrets.json
+**/config/settings/local.py

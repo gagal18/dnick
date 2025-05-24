@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+    {% if user.is_authenticated and baker %}
+        <div class="row justify-content-center">
+            <form method="post" action="{% url 'add-cake' %}" enctype="multipart/form-data"
+                  class="w-75 bg-secondary-subtle p-5 ">
+                <p class="fs-3 fw-bold text-danger text-center">Add new cake</p>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-danger w-100">Submit</button>
+            </form>
+        </div>
+    {% else %}
+        <p class="text-center text-danger fs-4">You must be logged in to add a cake.</p>
+        <div class="text-center">
+            <a href="/admin" class="btn btn-outline-danger">Login</a>
+        </div>
+    {% endif %}
+{% endblock %}
